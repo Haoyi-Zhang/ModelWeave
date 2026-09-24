@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=stealth,semithick,node distance=12mm and 16mm,
+ cell/.style={draw,rectangle,minimum width=10mm,minimum height=7mm,font=\footnotesize},
+ asp/.style={draw,circle,minimum size=7mm,font=\scriptsize,inner sep=1pt}]
+\node[asp] (l1) {$L_1$};
+\node[asp,below=of l1] (l2) {$L_2$};
+\node[asp,below=of l2] (l3) {$L_3$};
+\node[cell,right=22mm of l2] (child) {$b_j$};
+\node[asp,right=16mm of child] (q) {$q_j$};
+\node[cell,above right=8mm and 18mm of q] (root) {$c_j$};
+\node[asp,right=18mm of root] (r) {$r$};
+\draw[->] (l2)--node[above,font=\scriptsize]{$:=1$}(child);
+\draw[->] (l3)--node[below,font=\scriptsize]{$:=1$}(child);
+\draw[->] (child)--node[above,font=\scriptsize]{observe $1$}(q);
+\draw[->] (q)--node[above,font=\scriptsize]{$:=1$}(root);
+\draw[->] (l1) -| node[pos=.25,above,font=\scriptsize]{$:=1$} (root);
+\draw[->] (root)--node[above,font=\scriptsize]{observe $1$}(r);
+\end{tikzpicture}

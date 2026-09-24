@@ -1,0 +1,317 @@
+@inproceedings{Klein2009,
+  author={Jacques Klein and J{"o}rg Kienzle and Brice Morin and Jean-Marc J{\'e}z{\'e}quel},
+  title={Aspect Model Unweaving},
+  booktitle={Model Driven Engineering Languages and Systems},
+  series={Lecture Notes in Computer Science}, volume={5795}, pages={514--530},
+  publisher={Springer}, year={2009}, doi={10.1007/978-3-642-04425-0_39}
+}
+@article{Foster2007,
+  author={J. Nathan Foster and Michael B. Greenwald and Jonathan T. Moore and Benjamin C. Pierce and Alan Schmitt},
+  title={Combinators for Bidirectional Tree Transformations: A Linguistic Approach to the View-Update Problem},
+  journal={ACM Transactions on Programming Languages and Systems}, volume={29}, number={3}, articleno={17}, year={2007},
+  doi={10.1145/1232420.1232424}
+}
+@inproceedings{Bohannon2006,
+  author={Aaron Bohannon and Benjamin C. Pierce and Jeffrey A. Vaughan},
+  title={Relational Lenses: A Language for Updatable Views},
+  booktitle={Proceedings of the 25th ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+  pages={338--347}, publisher={ACM}, year={2006}, doi={10.1145/1142351.1142399}
+}
+@inproceedings{Hofmann2011,
+  author={Martin Hofmann and Benjamin C. Pierce and Daniel Wagner},
+  title={Symmetric Lenses},
+  booktitle={Proceedings of the 38th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+  pages={371--384}, publisher={ACM}, year={2011}, doi={10.1145/1926385.1926428}
+}
+@inproceedings{Stevens2008,
+  author={Perdita Stevens}, title={A Landscape of Bidirectional Model Transformations},
+  booktitle={Generative and Transformational Techniques in Software Engineering II},
+  series={Lecture Notes in Computer Science}, volume={5235}, pages={408--424}, publisher={Springer}, year={2008},
+  doi={10.1007/978-3-540-88643-3_10}
+}
+@inproceedings{Czarnecki2009,
+  author={Krzysztof Czarnecki and J. Nathan Foster and Zhenjiang Hu and Ralf L{"a}mmel and Andy Sch{"u}rr and James F. Terwilliger},
+  title={Bidirectional Transformations: A Cross-Discipline Perspective},
+  booktitle={Theory and Practice of Model Transformations}, series={Lecture Notes in Computer Science}, volume={5563},
+  pages={260--283}, publisher={Springer}, year={2009}, doi={10.1007/978-3-642-02408-5_19}
+}
+@inproceedings{Voigtlaender2009,
+  author={Janis Voigtl{"a}nder}, title={Bidirectionalization for Free! (Pearl)},
+  booktitle={Proceedings of the 36th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+  pages={165--176}, publisher={ACM}, year={2009}, doi={10.1145/1480881.1480904}
+}
+@inproceedings{Matsuda2007,
+  author={Kazutaka Matsuda and Zhenjiang Hu and Keisuke Nakano and Makoto Hamana and Masato Takeichi},
+  title={Bidirectionalization Transformation Based on Automatic Derivation of View Complement Functions},
+  booktitle={Proceedings of the 12th ACM SIGPLAN International Conference on Functional Programming},
+  pages={47--58}, publisher={ACM}, year={2007}, doi={10.1145/1291151.1291162}
+}
+@article{Diskin2011,
+  author={Zinovy Diskin and Yingfei Xiong and Krzysztof Czarnecki},
+  title={From State- to Delta-Based Bidirectional Model Transformations: The Symmetric Case},
+  journal={Journal of Object Technology}, volume={10}, pages={6:1--6:25}, year={2011}, doi={10.5381/jot.2011.10.1.a6}
+}
+@article{Pacheco2014,
+  author={Hugo Pacheco and Alcino Cunha and Zhenjiang Hu},
+  title={Delta Lenses over Inductive Types},
+  journal={Electronic Communications of the EASST}, volume={57}, year={2013}, doi={10.14279/tuj.eceasst.57.874}
+}
+@article{Lanese2024,
+  author={Ivan Lanese and Iain C. C. Phillips and Irek Ulidowski},
+  title={An Axiomatic Theory for Reversible Computation},
+  journal={ACM Transactions on Computational Logic}, volume={25}, number={2}, articleno={11}, numpages={40}, year={2024},
+  doi={10.1145/3648474}
+}
+@article{Ulidowski2018,
+  author={Irek Ulidowski and Iain Phillips and Shoji Yuen}, title={Reversing Event Structures},
+  journal={New Generation Computing}, volume={36}, number={3}, pages={281--306}, year={2018}, doi={10.1007/s00354-018-0040-8}
+}
+@inproceedings{Danos2004,
+  author={Vincent Danos and Jean Krivine}, title={Reversible Communicating Systems},
+  booktitle={CONCUR 2004 -- Concurrency Theory}, series={Lecture Notes in Computer Science}, volume={3170},
+  pages={292--307}, publisher={Springer}, year={2004}, doi={10.1007/978-3-540-28644-8_19}
+}
+@inproceedings{Phillips2007,
+  author={Iain Phillips and Irek Ulidowski}, title={Reversing Algebraic Process Calculi},
+  booktitle={Foundations of Software Science and Computational Structures}, series={Lecture Notes in Computer Science}, volume={4423},
+  pages={246--260}, publisher={Springer}, year={2007}, doi={10.1007/978-3-540-71389-0_19}
+}
+@article{Abramsky2005,
+  author={Samson Abramsky}, title={A Structural Approach to Reversible Computation},
+  journal={Theoretical Computer Science}, volume={347}, number={3}, pages={441--464}, year={2005}, doi={10.1016/j.tcs.2005.07.002}
+}
+@article{Landauer1961,
+  author={Rolf Landauer}, title={Irreversibility and Heat Generation in the Computing Process},
+  journal={IBM Journal of Research and Development}, volume={5}, number={3}, pages={183--191}, year={1961}, doi={10.1147/rd.53.0183}
+}
+@article{Bennett1973,
+  author={Charles H. Bennett}, title={Logical Reversibility of Computation},
+  journal={IBM Journal of Research and Development}, volume={17}, number={6}, pages={525--532}, year={1973}, doi={10.1147/rd.176.0525}
+}
+@article{Archer1984,
+  author={James E. Archer, Jr. and Richard Conway and Fred B. Schneider},
+  title={User Recovery and Reversal in Interactive Systems},
+  journal={ACM Transactions on Programming Languages and Systems}, volume={6}, number={1}, pages={1--19}, year={1984}, doi={10.1145/357233.357234}
+}
+@article{Leeman1986,
+  author={George B. Leeman}, title={A Formal Approach to Undo Operations in Programming Languages},
+  journal={ACM Transactions on Programming Languages and Systems}, volume={8}, number={1}, pages={50--87}, year={1986}, doi={10.1145/5001.5005}
+}
+@inproceedings{Berlage1994,
+  author={Thomas Berlage}, title={A Selective Undo Mechanism for Graphical User Interfaces Based on Command Objects},
+  booktitle={ACM Transactions on Computer-Human Interaction}, volume={1}, number={3}, pages={269--294}, year={1994},
+  doi={10.1145/196699.196721}
+}
+@inproceedings{Prakash1994,
+  author={Atul Prakash and Michael J. Knister}, title={A Framework for Undoing Actions in Collaborative Systems},
+  booktitle={Proceedings of the ACM Conference on Computer-Supported Cooperative Work}, pages={273--280}, publisher={ACM}, year={1994},
+  doi={10.1145/192844.193016}
+}
+@inproceedings{Abowd1992,
+  author={Gregory D. Abowd and Alan J. Dix}, title={Giving Undo Attention},
+  booktitle={Proceedings of the INTERACT '90 and CHI '90 Conference on Human Factors in Computing Systems}, pages={317--322}, publisher={ACM}, year={1992},
+  doi={10.1145/142750.142857}
+}
+@article{Acar2006,
+  author={Umut A. Acar and Guy E. Blelloch and Robert Harper}, title={Adaptive Functional Programming},
+  journal={ACM Transactions on Programming Languages and Systems}, volume={28}, number={6}, pages={990--1034}, year={2006}, doi={10.1145/1186632.1186634}
+}
+@article{Acar2010,
+  author={Umut A. Acar and Guy E. Blelloch and Matthias Blume and Robert Harper and Kanat Tangwongsan},
+  title={An Experimental Analysis of Self-Adjusting Computation},
+  journal={ACM Transactions on Programming Languages and Systems}, volume={32}, number={1}, articleno={3}, year={2009}, doi={10.1145/1596527.1596530}
+}
+@article{Liu1998,
+  author={Yanhong A. Liu and Scott D. Stoller and Tevfik Teitelbaum}, title={Static Caching for Incremental Computation},
+  journal={ACM Transactions on Programming Languages and Systems}, volume={20}, number={3}, pages={546--585}, year={1998}, doi={10.1145/291889.291893}
+}
+@article{Ferrante1987,
+  author={Jeanne Ferrante and Karl J. Ottenstein and Joe D. Warren},
+  title={The Program Dependence Graph and Its Use in Optimization},
+  journal={ACM Transactions on Programming Languages and Systems}, volume={9}, number={3}, pages={319--349}, year={1987}, doi={10.1145/24039.24041}
+}
+@article{Horwitz1990,
+  author={Susan Horwitz and Thomas Reps and David Binkley}, title={Interprocedural Slicing Using Dependence Graphs},
+  journal={ACM Transactions on Programming Languages and Systems}, volume={12}, number={1}, pages={26--60}, year={1990}, doi={10.1145/77606.77608}
+}
+@article{Horwitz1989,
+  author={Susan Horwitz and Jan Prins and Thomas Reps}, title={Integrating Noninterfering Versions of Programs},
+  journal={ACM Transactions on Programming Languages and Systems}, volume={11}, number={3}, pages={345--387}, year={1989}, doi={10.1145/65979.65982}
+}
+@article{Rinard1997,
+  author={Martin C. Rinard and Pedro C. Diniz}, title={Commutativity Analysis: A New Analysis Framework for Parallelizing Compilers},
+  journal={ACM Transactions on Programming Languages and Systems}, volume={19}, number={6}, pages={942--991}, year={1997}, doi={10.1145/267959.269969}
+}
+@article{Stoyle2007,
+  author={Gareth Stoyle and Michael Hicks and Gavin Bierman and Peter Sewell and Iulian Neamtiu},
+  title={Mutatis Mutandis: Safe and Predictable Dynamic Software Updating},
+  journal={ACM Transactions on Programming Languages and Systems}, volume={29}, number={4}, articleno={22}, year={2007}, doi={10.1145/1255450.1255455}
+}
+@article{Apt2000,
+  author={Krzysztof R. Apt}, title={The Role of Commutativity in Constraint Propagation Algorithms},
+  journal={ACM Transactions on Programming Languages and Systems}, volume={22}, number={6}, pages={1002--1036}, year={2000}, doi={10.1145/371880.371884}
+}
+@article{DarwicheMarquis2002,
+  author={Adnan Darwiche and Pierre Marquis}, title={A Knowledge Compilation Map},
+  journal={Journal of Artificial Intelligence Research}, volume={17}, pages={229--264}, year={2002}, doi={10.1613/jair.989}
+}
+@article{DarwicheHirth2023,
+  author={Adnan Darwiche and Auguste Hirth}, title={On the (Complete) Reasons Behind Decisions},
+  journal={Journal of Logic, Language and Information}, volume={32}, pages={63--88}, year={2023}, doi={10.1007/s10849-022-09377-8}
+}
+@inproceedings{DarwicheJi2022,
+  author={Adnan Darwiche and Chunxi Ji}, title={On the Computation of Necessary and Sufficient Explanations},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence}, volume={36}, number={5}, pages={5582--5591}, year={2022},
+  doi={10.1609/aaai.v36i5.20498}
+}
+@inproceedings{Ignatiev2021,
+  author={Alexey Ignatiev and Joao Marques-Silva}, title={SAT-Based Rigorous Explanations for Decision Lists},
+  booktitle={Theory and Applications of Satisfiability Testing -- SAT 2021}, series={Lecture Notes in Computer Science}, volume={12831},
+  pages={251--269}, publisher={Springer}, year={2021}, doi={10.1007/978-3-030-80223-3_18}
+}
+@article{Reiter1987,
+  author={Raymond Reiter}, title={A Theory of Diagnosis from First Principles},
+  journal={Artificial Intelligence}, volume={32}, number={1}, pages={57--95}, year={1987}, doi={10.1016/0004-3702(87)90062-2}
+}
+@inproceedings{Junker2004,
+  author={Ulrich Junker}, title={QUICKXPLAIN: Preferred Explanations and Relaxations for Over-Constrained Problems},
+  booktitle={Proceedings of the 19th National Conference on Artificial Intelligence}, pages={167--172}, publisher={AAAI Press}, year={2004}
+}
+@article{Liffiton2008,
+  author={Mark H. Liffiton and Karem A. Sakallah}, title={Algorithms for Computing Minimal Unsatisfiable Subsets of Constraints},
+  journal={Journal of Automated Reasoning}, volume={40}, number={1}, pages={1--33}, year={2008}, doi={10.1007/s10817-007-9084-z}
+}
+@article{MarquesSilva2010,
+  author={Joao Marques-Silva}, title={Minimal Unsatisfiability: Models, Algorithms and Applications},
+  journal={International Journal on Artificial Intelligence Tools}, volume={19}, number={4}, pages={463--482}, year={2010}, doi={10.1142/S0218213010000272}
+}
+@inproceedings{Shih2018,
+  author={Andy Shih and Arthur Choi and Adnan Darwiche}, title={A Symbolic Approach to Explaining Bayesian Network Classifiers},
+  booktitle={Proceedings of the Twenty-Seventh International Joint Conference on Artificial Intelligence}, pages={5103--5111}, year={2018},
+  doi={10.24963/ijcai.2018/708}
+}
+@incollection{Karp1972,
+  author={Richard M. Karp}, title={Reducibility among Combinatorial Problems},
+  booktitle={Complexity of Computer Computations}, editor={Raymond E. Miller and James W. Thatcher}, pages={85--103},
+  publisher={Plenum Press}, year={1972}, doi={10.1007/978-1-4684-2001-2_9}
+}
+@inproceedings{Schaefer1978,
+  author={Thomas J. Schaefer}, title={The Complexity of Satisfiability Problems},
+  booktitle={Proceedings of the Tenth Annual ACM Symposium on Theory of Computing}, pages={216--226}, publisher={ACM}, year={1978},
+  doi={10.1145/800133.804350}
+}
+@article{Dowling1984,
+  author={William F. Dowling and Jean H. Gallier}, title={Linear-Time Algorithms for Testing the Satisfiability of Propositional Horn Formulae},
+  journal={Journal of Logic Programming}, volume={1}, number={3}, pages={267--284}, year={1984}, doi={10.1016/0743-1066(84)90014-1}
+}
+@article{CookReckhow1979,
+  author={Stephen A. Cook and Robert A. Reckhow}, title={The Relative Efficiency of Propositional Proof Systems},
+  journal={Journal of Symbolic Logic}, volume={44}, number={1}, pages={36--50}, year={1979}, doi={10.2307/2273702}
+}
+@inproceedings{Necula1997,
+  author={George C. Necula}, title={Proof-Carrying Code},
+  booktitle={Proceedings of the 24th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages}, pages={106--119}, publisher={ACM}, year={1997},
+  doi={10.1145/263699.263712}
+}
+@inproceedings{Wetzler2014,
+  author={Nathan Wetzler and Marijn J. H. Heule and Warren A. Hunt, Jr.}, title={DRAT-trim: Efficient Checking and Trimming Using Expressive Clausal Proofs},
+  booktitle={Theory and Applications of Satisfiability Testing -- SAT 2014}, series={Lecture Notes in Computer Science}, volume={8561},
+  pages={422--429}, publisher={Springer}, year={2014}, doi={10.1007/978-3-319-09284-3_31}
+}
+@inproceedings{Heule2017,
+  author={Marijn J. H. Heule and Warren A. Hunt, Jr. and Nathan Wetzler}, title={Efficient, Verified Checking of Propositional Proofs},
+  booktitle={Interactive Theorem Proving}, series={Lecture Notes in Computer Science}, volume={10499}, pages={269--284}, publisher={Springer}, year={2017},
+  doi={10.1007/978-3-319-66107-0_18}
+}
+@inproceedings{CruzFilipe2017,
+  author={Luis Cruz-Filipe and Joao Marques-Silva and Peter Schneider-Kamp}, title={Efficient Certified RAT Verification},
+  booktitle={Automated Deduction -- CADE 26}, series={Lecture Notes in Computer Science}, volume={10395}, pages={220--236}, publisher={Springer}, year={2017},
+  doi={10.1007/978-3-319-63046-5_14}
+}
+@article{Alekhnovich2001,
+  author={Michael Alekhnovich and Sam Buss and Shlomo Moran and Toniann Pitassi},
+  title={Minimum Propositional Proof Length Is NP-Hard to Linearly Approximate},
+  journal={Journal of Symbolic Logic}, volume={66}, number={1}, pages={171--191}, year={2001}, doi={10.2307/2694916}
+}
+@inproceedings{Feldman1999,
+  author={Jon Feldman and Matthias Ruhl}, title={The Directed Steiner Network Problem Is Tractable for a Constant Number of Terminals},
+  booktitle={Proceedings of the 40th Annual Symposium on Foundations of Computer Science}, pages={299--308}, publisher={IEEE Computer Society}, year={1999},
+  doi={10.1109/SFFCS.1999.814605}
+}
+@inproceedings{Buneman2001,
+  author={Peter Buneman and Sanjeev Khanna and Wang-Chiew Tan}, title={Why and Where: A Characterization of Data Provenance},
+  booktitle={Database Theory -- ICDT 2001}, series={Lecture Notes in Computer Science}, volume={1973}, pages={316--330}, publisher={Springer}, year={2001},
+  doi={10.1007/3-540-44503-X_20}
+}
+@inproceedings{Green2007,
+  author={Todd J. Green and Grigoris Karvounarakis and Val Tannen}, title={Provenance Semirings},
+  booktitle={Proceedings of the 26th ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems}, pages={31--40}, publisher={ACM}, year={2007},
+  doi={10.1145/1265530.1265535}
+}
+@article{Cheney2009,
+  author={James Cheney and Laura Chiticariu and Wang-Chiew Tan}, title={Provenance in Databases: Why, How, and Where},
+  journal={Foundations and Trends in Databases}, volume={1}, number={4}, pages={379--474}, year={2009}, doi={10.1561/1900000006}
+}
+@book{Ehrig2006,
+  author={Hartmut Ehrig and Karsten Ehrig and Ulrike Prange and Gabriele Taentzer}, title={Fundamentals of Algebraic Graph Transformation},
+  publisher={Springer}, year={2006}, doi={10.1007/3-540-31188-2}
+}
+@inproceedings{Habel1996,
+  author={Annegret Habel and Reiko Heckel and Gabriele Taentzer}, title={Graph Grammars with Negative Application Conditions},
+  booktitle={Fundamentals of Computation Theory}, series={Lecture Notes in Computer Science}, volume={965}, pages={405--418}, publisher={Springer}, year={1995},
+  doi={10.1007/3-540-60249-6_70}
+}
+@inproceedings{Plump1993,
+  author={Detlef Plump}, title={Hypergraph Rewriting: Critical Pairs and Undecidability of Confluence},
+  booktitle={Term Graph Rewriting: Theory and Practice}, pages={201--213}, publisher={Wiley}, year={1993}
+}
+@article{Heckel2002,
+  author={Reiko Heckel}, title={Graph Transformation in a Nutshell},
+  journal={Electronic Notes in Theoretical Computer Science}, volume={148}, number={1}, pages={187--198}, year={2006}, doi={10.1016/j.entcs.2005.12.018}
+}
+@article{Mens2006,
+  author={Tom Mens and Pieter Van Gorp}, title={A Taxonomy of Model Transformation},
+  journal={Electronic Notes in Theoretical Computer Science}, volume={152}, pages={125--142}, year={2006}, doi={10.1016/j.entcs.2005.10.021}
+}
+@article{Czarnecki2006,
+  author={Krzysztof Czarnecki and Simon Helsen}, title={Feature-Based Survey of Model Transformation Approaches},
+  journal={IBM Systems Journal}, volume={45}, number={3}, pages={621--645}, year={2006}, doi={10.1147/sj.453.0621}
+}
+@inproceedings{Kiczales1997,
+  author={Gregor Kiczales and John Lamping and Anurag Mendhekar and Chris Maeda and Cristina Videira Lopes and Jean-Marc Loingtier and John Irwin},
+  title={Aspect-Oriented Programming}, booktitle={ECOOP '97 -- Object-Oriented Programming}, series={Lecture Notes in Computer Science}, volume={1241},
+  pages={220--242}, publisher={Springer}, year={1997}, doi={10.1007/BFb0053381}
+}
+@inproceedings{France2004,
+  author={Robert B. France and Dae-Kyoo Kim and Sudipto Ghosh and Eunjee Song}, title={A UML-Based Pattern Specification Technique},
+  booktitle={IEEE Transactions on Software Engineering}, volume={30}, number={3}, pages={193--206}, year={2004}, doi={10.1109/TSE.2004.1271173}
+}
+@article{Morin2010,
+  author={Brice Morin and Jacques Klein and Olivier Barais and Jean-Marc J{\'e}z{\'e}quel}, title={A Generic Weaver for Supporting Product Lines},
+  journal={Software Product Line Conference Workshop Proceedings}, year={2008}
+}
+@inproceedings{Ottenstein1984,
+  author={Karl J. Ottenstein and Linda M. Ottenstein}, title={The Program Dependence Graph in a Software Development Environment},
+  booktitle={Proceedings of the First ACM SIGSOFT/SIGPLAN Software Engineering Symposium on Practical Software Development Environments},
+  pages={177--184}, publisher={ACM}, year={1984}, doi={10.1145/800020.808263}
+}
+@article{Xu2026,
+  author={Jianfeng Xu}, title={Closure-Preserving Rate--Distortion for Reversible Logging},
+  journal={arXiv preprint arXiv:2606.16592}, year={2026}, doi={10.48550/arXiv.2606.16592}
+}
+@book{GareyJohnson1979,
+  author={Michael R. Garey and David S. Johnson}, title={Computers and Intractability: A Guide to the Theory of NP-Completeness},
+  publisher={W. H. Freeman}, year={1979}
+}
+@article{Birkhoff1937,
+  author={Garrett Birkhoff}, title={Rings of Sets}, journal={Duke Mathematical Journal}, volume={3}, number={3}, pages={443--454}, year={1937}, doi={10.1215/S0012-7094-37-00334-X}
+}
+@book{CramaHammer2011,
+  author={Yves Crama and Peter L. Hammer}, title={Boolean Functions: Theory, Algorithms, and Applications}, publisher={Cambridge University Press}, year={2011}, doi={10.1017/CBO9780511852008}
+}
+@article{Quine1952,
+  author={Willard Van Orman Quine}, title={The Problem of Simplifying Truth Functions}, journal={American Mathematical Monthly}, volume={59}, number={8}, pages={521--531}, year={1952}, doi={10.2307/2308219}
+}
+@article{McCluskey1956,
+  author={Edward J. McCluskey, Jr.}, title={Minimization of Boolean Functions}, journal={Bell System Technical Journal}, volume={35}, number={6}, pages={1417--1444}, year={1956}, doi={10.1002/j.1538-7305.1956.tb03835.x}
+}
