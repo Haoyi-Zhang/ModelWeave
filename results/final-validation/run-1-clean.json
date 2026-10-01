@@ -9,9 +9,9 @@
       ],
       "label": "semantic-tests",
       "exit_code": 0,
-      "wall_seconds": 1.3305394779999915,
-      "cpu_seconds": 1.7659829999999999,
-      "cumulative_child_peak_rss_kib": 96040
+      "wall_seconds": 1.0908580929999516,
+      "cpu_seconds": 1.413575,
+      "cumulative_child_peak_rss_kib": 94876
     },
     {
       "command": [
@@ -21,9 +21,9 @@
       ],
       "label": "structural-tests",
       "exit_code": 0,
-      "wall_seconds": 0.972791222000069,
-      "cpu_seconds": 1.410752,
-      "cumulative_child_peak_rss_kib": 97320
+      "wall_seconds": 1.0727726119998806,
+      "cpu_seconds": 1.4498659999999999,
+      "cumulative_child_peak_rss_kib": 100012
     },
     {
       "command": [
@@ -33,9 +33,9 @@
       ],
       "label": "source-examples",
       "exit_code": 0,
-      "wall_seconds": 0.9245799230000102,
-      "cpu_seconds": 1.3166499999999999,
-      "cumulative_child_peak_rss_kib": 97320
+      "wall_seconds": 0.7239248420000877,
+      "cpu_seconds": 1.130588,
+      "cumulative_child_peak_rss_kib": 100012
     },
     {
       "command": [
@@ -44,9 +44,9 @@
       ],
       "label": "exact-pilot",
       "exit_code": 0,
-      "wall_seconds": 2.3336430090000704,
-      "cpu_seconds": 2.712136,
-      "cumulative_child_peak_rss_kib": 97320
+      "wall_seconds": 1.7761695720000716,
+      "cpu_seconds": 2.0937370000000004,
+      "cumulative_child_peak_rss_kib": 100012
     },
     {
       "command": [
@@ -55,9 +55,9 @@
       ],
       "label": "set-pilot",
       "exit_code": 0,
-      "wall_seconds": 3.033250986999974,
-      "cpu_seconds": 3.536805,
-      "cumulative_child_peak_rss_kib": 97320
+      "wall_seconds": 2.2275381980000475,
+      "cpu_seconds": 2.598343999999999,
+      "cumulative_child_peak_rss_kib": 100012
     },
     {
       "command": [
@@ -66,9 +66,9 @@
       ],
       "label": "structural-pilot",
       "exit_code": 0,
-      "wall_seconds": 0.9927978539999458,
-      "cpu_seconds": 1.3834999999999993,
-      "cumulative_child_peak_rss_kib": 97320
+      "wall_seconds": 0.7231407330000366,
+      "cpu_seconds": 1.1027850000000006,
+      "cumulative_child_peak_rss_kib": 100012
     },
     {
       "command": [
@@ -79,9 +79,9 @@
       ],
       "label": "campaign",
       "exit_code": 0,
-      "wall_seconds": 23.523172165000005,
-      "cpu_seconds": 23.868669,
-      "cumulative_child_peak_rss_kib": 110616
+      "wall_seconds": 16.368402872999923,
+      "cpu_seconds": 16.715495999999998,
+      "cumulative_child_peak_rss_kib": 110448
     },
     {
       "command": [
@@ -100,9 +100,9 @@
       ],
       "label": "independent-campaign-check-000-009",
       "exit_code": 0,
-      "wall_seconds": 1.2799829510001928,
-      "cpu_seconds": 1.6260949999999976,
-      "cumulative_child_peak_rss_kib": 110616
+      "wall_seconds": 0.871202877000087,
+      "cpu_seconds": 1.2501740000000003,
+      "cumulative_child_peak_rss_kib": 110448
     },
     {
       "command": [
@@ -121,9 +121,9 @@
       ],
       "label": "independent-campaign-check-010-019",
       "exit_code": 0,
-      "wall_seconds": 1.3754063660001066,
-      "cpu_seconds": 1.764409000000001,
-      "cumulative_child_peak_rss_kib": 110616
+      "wall_seconds": 0.8233424899999591,
+      "cpu_seconds": 1.2125380000000023,
+      "cumulative_child_peak_rss_kib": 110448
     },
     {
       "command": [
@@ -142,9 +142,9 @@
       ],
       "label": "independent-campaign-check-020-029",
       "exit_code": 0,
-      "wall_seconds": 1.2755792939999537,
-      "cpu_seconds": 1.6784989999999962,
-      "cumulative_child_peak_rss_kib": 110616
+      "wall_seconds": 0.821857264000073,
+      "cpu_seconds": 1.2150790000000005,
+      "cumulative_child_peak_rss_kib": 110448
     },
     {
       "command": [
@@ -163,9 +163,9 @@
       ],
       "label": "independent-campaign-check-030-039",
       "exit_code": 0,
-      "wall_seconds": 1.2303693280000516,
-      "cpu_seconds": 1.6891120000000002,
-      "cumulative_child_peak_rss_kib": 110616
+      "wall_seconds": 0.8217194419999032,
+      "cpu_seconds": 1.2033900000000004,
+      "cumulative_child_peak_rss_kib": 110448
     },
     {
       "command": [
@@ -184,9 +184,9 @@
       ],
       "label": "independent-campaign-check-040-049",
       "exit_code": 0,
-      "wall_seconds": 1.426957216999881,
-      "cpu_seconds": 1.8271590000000009,
-      "cumulative_child_peak_rss_kib": 110616
+      "wall_seconds": 0.9222247079999306,
+      "cpu_seconds": 1.2778829999999979,
+      "cumulative_child_peak_rss_kib": 110448
     },
     {
       "command": [
@@ -199,9 +199,9 @@
       ],
       "label": "coverage-summary",
       "exit_code": 0,
-      "wall_seconds": 1.68207081200012,
-      "cpu_seconds": 2.043335000000005,
-      "cumulative_child_peak_rss_kib": 110616
+      "wall_seconds": 1.222260446000064,
+      "cpu_seconds": 1.566506000000002,
+      "cumulative_child_peak_rss_kib": 110448
     },
     {
       "command": [
@@ -216,9 +216,9 @@
       ],
       "label": "independent-example-check",
       "exit_code": 0,
-      "wall_seconds": 0.8232388829999309,
-      "cpu_seconds": 1.2530290000000006,
-      "cumulative_child_peak_rss_kib": 110616
+      "wall_seconds": 0.6215298960000837,
+      "cpu_seconds": 1.0142299999999995,
+      "cumulative_child_peak_rss_kib": 110448
     },
     {
       "command": [
@@ -234,9 +234,9 @@
       ],
       "label": "policy-demo",
       "exit_code": 0,
-      "wall_seconds": 0.8264073849998113,
-      "cpu_seconds": 1.2092129999999996,
-      "cumulative_child_peak_rss_kib": 110616
+      "wall_seconds": 0.6242422719999468,
+      "cpu_seconds": 1.008170000000003,
+      "cumulative_child_peak_rss_kib": 110448
     },
     {
       "command": [
@@ -246,19 +246,19 @@
       ],
       "label": "independent-demo-check",
       "exit_code": 0,
-      "wall_seconds": 0.8237173119998715,
-      "cpu_seconds": 1.2842840000000022,
-      "cumulative_child_peak_rss_kib": 110616
+      "wall_seconds": 0.6240128760000516,
+      "cpu_seconds": 0.9630609999999966,
+      "cumulative_child_peak_rss_kib": 110448
     }
   ],
   "workers": 1,
   "semantic_campaign_records_compared": 50000,
   "independently_checked_campaign_packets": 50000,
-  "structural_inputs_compared": 165,
+  "structural_inputs_compared": 421,
   "source_guided_inputs_compared": 6,
   "hashes_generated": false,
   "comparison": "exact uncompressed semantic records and scientific counters; timings excluded",
-  "wall_seconds": 44.00188925899988,
-  "measured_child_cpu_seconds": 50.36963,
+  "wall_seconds": 31.45270908800012,
+  "measured_child_cpu_seconds": 37.215422000000004,
   "scope": "This clean run only; early unmetered exploratory CPU is not reconstructed."
 }

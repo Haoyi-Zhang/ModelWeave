@@ -87,22 +87,36 @@ def run(output):
                         'edges': edges, 'valid_masks': valid, 'policies': tests, 'certificate': cert})
     sat_cases = 0
     rng = random.Random(730163)
+    formulas_to_check=[]
+    # Preserve the original 18 named/random checks, then add 256 deterministic
+    # bounded reduction checks.  The latter exercise both satisfiable and
+    # unsatisfiable formulas without changing the general theorem's proof status.
     for n in range(1, 4):
         for i in range(6):
             formula = [[rng.choice((-1, 1)) * rng.randint(1, n) for _ in range(3)] for _ in range(3)]
-            if i == 0:
-                formula = [[1], [-1], [n]]
-            expected = any(all(any(bool(mask & (1 << (abs(lit) - 1))) == (lit > 0)
-                                      for lit in clause) for clause in formula) for mask in range(1 << n))
-            raw, on, off = structural.two_writer_sat(n, formula); c = engine.parse_case(raw)
-            assert max(structural.writer_counts(c)) <= 2
-            assert len({event.tag for event in c.events}) == len(c.events) == c.aspects
-            assert max((cl.size for cl in producer.compile_trace(c)), default=0) <= 3
-            cert = producer.solve(c, on, off); checker.check(raw, cert)
-            assert (cert['kind'] == 'optimal') == expected
-            records.append({'group': 'two_writer_sat', 'variables': n, 'formula': formula,
-                            'satisfiable': expected, 'case': raw, 'certificate': cert})
-            sat_cases += 1
+            if i == 0: formula = [[1], [-1], [n]]
+            formulas_to_check.append((n,formula,'original'))
+    for i in range(256):
+        n=1+(i%3); h=1+((i//3)%3)
+        local=random.Random(911731+i)
+        formula=[[local.choice((-1,1))*local.randint(1,n) for _ in range(3)] for _ in range(h)]
+        if i%16==0: formula=[[1],[-1]]
+        elif i%16==1: formula=[[1]]
+        formulas_to_check.append((n,formula,'extended'))
+    for n,formula,cohort in formulas_to_check:
+        expected = any(all(any(bool(mask & (1 << (abs(lit) - 1))) == (lit > 0)
+                                  for lit in clause) for clause in formula) for mask in range(1 << n))
+        raw, on, off = structural.two_writer_sat(n, formula); c = engine.parse_case(raw)
+        assert max(structural.writer_counts(c)) <= 2
+        assert len({event.tag for event in c.events}) == len(c.events) == c.aspects
+        assert on.bit_count()==off.bit_count()==1 and not on&off
+        assert all(d==2 for d in raw['domains'])
+        assert max((cl.size for cl in producer.compile_trace(c)), default=0) <= 3
+        cert = producer.solve(c, on, off); checker.check(raw, cert)
+        assert (cert['kind'] == 'optimal') == expected
+        records.append({'group': 'two_writer_sat', 'cohort':cohort,'variables': n, 'formula': formula,
+                        'satisfiable': expected, 'case': raw, 'certificate': cert})
+        sat_cases += 1
     for leaves in range(2, 7):
         raw, on, off = structural.binary_choice_tree(leaves); c = engine.parse_case(raw)
         assert max(structural.writer_counts(c)) == 2

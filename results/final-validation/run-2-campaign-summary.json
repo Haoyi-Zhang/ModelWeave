@@ -66,10 +66,10 @@
       "baseline_dependency_tests": 52087
     }
   },
-  "cpu_seconds": 22.483218395,
-  "wall_seconds": 22.49845576200073,
-  "peak_rss_kib": 110616,
-  "max_case_seconds": 0.04903256400007194,
+  "cpu_seconds": 15.039313824999999,
+  "wall_seconds": 15.056479523000235,
+  "peak_rss_kib": 110576,
+  "max_case_seconds": 0.05505571000003329,
   "workers": 1,
   "seed": 27182818
 }

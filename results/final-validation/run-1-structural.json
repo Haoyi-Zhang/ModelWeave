@@ -10,8 +10,8 @@
   "choice_tree_cases": 5,
   "largest_checked_global_core": 7,
   "strict_expressivity_nonrepresentation": true,
-  "cpu_seconds": 0.39962052400000003,
-  "wall_seconds": 0.3999442799999997,
+  "cpu_seconds": 0.392021105,
+  "wall_seconds": 0.39453589499999,
   "peak_rss_kib": 99884,
   "counters": {
     "producer": {

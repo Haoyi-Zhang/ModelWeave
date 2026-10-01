@@ -74,9 +74,9 @@
       "edges": 1
     }
   },
-  "cpu_seconds": 0.2956431290000001,
-  "wall_seconds": 0.2956596980000086,
-  "peak_rss_kib": 94640,
+  "cpu_seconds": 0.30398735599999993,
+  "wall_seconds": 0.3061159569999745,
+  "peak_rss_kib": 94764,
   "counters": {
     "producer": {
       "value_checks": 26589,

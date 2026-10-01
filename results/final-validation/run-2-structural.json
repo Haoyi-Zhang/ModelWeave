@@ -10,9 +10,9 @@
   "choice_tree_cases": 5,
   "largest_checked_global_core": 7,
   "strict_expressivity_nonrepresentation": true,
-  "cpu_seconds": 0.39962052400000003,
-  "wall_seconds": 0.3999442799999997,
-  "peak_rss_kib": 99884,
+  "cpu_seconds": 0.415961844,
+  "wall_seconds": 0.4175876279998647,
+  "peak_rss_kib": 99880,
   "counters": {
     "producer": {
       "value_checks": 2546,

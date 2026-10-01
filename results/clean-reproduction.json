@@ -92,5 +92,7 @@
   },
   "hashes_generated": false,
   "scope": "This clean run only; early unmetered exploratory CPU is not reconstructed.",
-  "detail_directory": "results/final-recheck/"
+  "historical_resource_record": true,
+  "later_targeted_regressions_included_in_timing": false,
+  "current_final_validation_directory": "results/final-validation/"
 }

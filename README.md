@@ -1,168 +1,80 @@
-# Reversible model-weaving semantics
+# Observation-stable model unweaving artifact
 
-This is the standalone executable artifact for the internal research draft
+This directory is a standalone executable artifact for the paper
 *Observation-Stable Model Unweaving: Local Certificates and a Two-Write Boundary*.
-It is not a production model weaver and not a proof-assistant development.
+It uses only the Python standard library and does not require `paper/`.
 
-The semantic interface is intentionally narrow: a fixed finite catalog of typed
-cells; an already executed, occurrence-ordered trace of closed constant-overwrite
-events; explicit unary observations; and one keep/erase decision per aspect tag.
-Retaining a tag retains all of its occurrences in original order. There is no
-rematching, fresh identity creation, hidden read, external effect, arbitrary
-relational guard, or production repository claim.
+## Exact scope
 
-## Results represented by this artifact
+The implemented and proved fragment has a finite typed cell catalog, fixed event
+order and fixed matches, explicit unary observations, simultaneous constant
+overwrite events, and one keep/erase decision per tag. Keeping a tag keeps all of
+its event occurrences in their original order. There is no rematching, fresh
+identity creation, hidden read, concurrency, external effect, arbitrary graph
+rewrite, or production-tool claim.
 
-The written development in `proofs/semantics.md` establishes, under the declared
-assumptions:
+The central boundary is precise: policy feasibility is polynomial in the
+one-write-per-cell fragment, and NP-complete with at most two writes per cell even
+when each aspect has exactly one event, cells are Boolean, and there is one forced
+keep and one forced removal. A single event may touch polynomially many cells; no
+constant-arity hardness result is claimed.
 
-- forward typing and complement-backed round trips;
-- the need to regenerate retained-event receipts after selective erasure;
-- exact observation factorization and last-occurrence normalization;
-- a representation-qualified local prime-obstruction result;
-- the distinction between local minimum explanations and global policy conflicts;
-- a conservative commuting-diamond condition;
-- NP-complete policy feasibility in the unbounded finite language;
-- sound finite refusal trees and minimum-cardinality policy-core checking;
-- an exact no-hidden-variable Boolean expressivity characterization; and
-- a polynomial one-write-per-cell fragment versus NP-completeness with at most two
-  writes per cell, plus unbounded global cores despite ternary local primes.
+## Reproduce
 
-Those are written mathematical arguments. The executable protocols below are
-finite falsification and certificate-replay evidence, not general mechanization.
-
-## Clean reproduction
-
-Use Python 3.10 or later on POSIX/Linux, the standard library, one CPU worker, and
-a fresh nonexistent output directory. No package installation or network access
-is needed.
+Run from this directory with Python 3.10 or newer and a new output directory:
 
 ```sh
-python reproduce_all.py --output /tmp/weaving-clean
+PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 \
+python3 reproduce_all.py --output /tmp/unweave-reproduction
 ```
 
-The integrated command runs semantic tests, structural tests, source-guided
-projections, three pilots, the 50-chunk campaign, five bounded independent-checker
-batches, coverage regeneration, an example check, a policy demonstration, and
-exact semantic reconciliation against the delivered records. It refuses an
-existing output directory and runs one child process at a time.
+The runner executes 16 sequential phases: semantic and structural tests,
+source-guided projections, three pilots, the 50-chunk campaign, five independent
+checker batches, coverage regeneration, an example check, a policy query, and an
+independent check of that query. It refuses an existing output directory. No
+network, GPU, external model API, non-standard package, or parallel worker is used.
 
-The final recorded clean run passed all 16 phases in 44.002 wall seconds and
-50.370 measured child CPU seconds. Its cumulative child peak RSS was 110,616 KiB.
-It exactly compared 50,000 decompressed campaign records, 165 structural inputs,
-six source-guided projections, and the scientific counters while deliberately
-excluding timing fields from semantic equality. All 50,000 campaign packets were
-accepted by the separately implemented checker. See
-`results/clean-reproduction.json` and `results/final-recheck/`.
-
-Useful individual commands are:
+Useful focused commands:
 
 ```sh
-python tests/test_semantics.py /tmp/weaving-tests.json
-python tests/test_structural.py /tmp/weaving-structural
-python tests/test_examples.py /tmp/weaving-examples
-python reproduce.py --out /tmp/weaving-campaign
-python verify.py /tmp/weaving-campaign/cases-*.jsonl.gz
-python verify.py results/examples/example-02.json
+python3 tests/test_semantics.py /tmp/semantic-tests.json
+python3 tests/test_structural.py /tmp/structural-tests
+python3 tests/test_examples.py /tmp/source-examples
+python3 verify.py results/examples/example-03.json
 ```
 
-The campaign can also be produced in resumable 1,000-case chunks numbered 0-49:
+## Recorded evidence
 
-```sh
-python reproduce.py --out /tmp/weaving-chunks --chunk 0
-# repeat for the remaining chunk numbers
-python reproduce.py --out /tmp/weaving-chunks --aggregate
-```
+- 50,000 deterministic campaign packets and 231,071 direct replay queries.
+- 49,526 successful certificates and 474 local-obstruction certificates.
+- 23,461 successful packets execute at least one retained event occurrence;
+  49,861 occurrence receipts are checked.
+- 421 structural inputs: 46 clause forms, 64 conjunctions, 32 one-write cases,
+  274 one-event-per-aspect two-write SAT reductions, and 5 choice trees.
+- 8 semantic test methods, including the fixed-mask minimum-fact regression:
+  `{r,b2,not g2}` is accepted while the four-fact inclusion-minimal but
+  nonminimum set `{r,b1,not g1,not g2}` is rejected.
+- 19 deliberately inconsistent mutations rejected; one coordinated input-and-
+  certificate change accepted, documenting the packet-origin trust boundary.
+- Six small source-guided projections from five published passages or figures;
+  they are not production benchmarks and no upstream tool was executed.
 
-Aggregation summarizes present chunks; it is not an integrity or correctness
-check and is incomplete until all 50 reports exist.
+Two fresh full runs passed all 16 phases and produced equal scientific records
+after excluding runtime telemetry. See `results/final-validation/`.
 
-For a bounded policy query:
+## Evidence boundary
 
-```sh
-python demo.py results/examples/example-02.json --on 2 --off 1 --output /tmp/weaving-query.json
-python verify.py /tmp/weaving-query.json
-```
+The written arguments are in `proofs/semantics.md`; executable tests are finite
+falsification and certificate-replay evidence. Neither is described as Lean, Coq,
+Isabelle, or other proof-assistant mechanization. The independent checker is a
+separate implementation path, but not independent authorship or cryptographic
+source authentication.
 
-A bit in `--on` forces a tag kept; a bit in `--off` forces it erased; the two masks
-must be disjoint. The producer minimizes optional removals. An infeasible request
-includes a cardinality-minimum conflicting subpolicy and a checked refusal tree.
+## Map
 
-## Finite evidence
-
-The main campaign has 50,000 deterministic input traces and 231,071 exact replay
-queries:
-
-| Population | Inputs | Queries | Invalid queries |
-|---|---:|---:|---:|
-| Exhaustive scalar | 12,350 | 98,800 | 5,976 |
-| Generated small scalar | 36,400 | 127,401 | 6,808 |
-| Generated medium | 1,200 | 4,670 | 1,384 |
-| Maximum-dimension graph catalog | 50 | 200 | 67 |
-| **Total** | **50,000** | **231,071** | **14,235** |
-
-It contains 49,526 successful-replay certificates and 474 local-obstruction
-certificates. Of the successful packets, 21,213 select the empty mask and 26,065
-execute no retained occurrence; 23,461 execute at least one retained occurrence
-and collectively check 49,861 occurrence receipts. Exactly 548 retain the full tag
-set. Thus the headline case count is not described as 50,000 nonempty inversions.
-
-The structural protocol has 165 inputs, 2,784 direct retention queries, 7,776
-one-writer partial-policy queries, 18 two-writer SAT constructions, and five
-binary-choice trees. The largest checked global core has seven facts. The semantic
-mutation suite rejects 19 inconsistent changes and accepts one deliberately
-consistent replacement, exposing the packet-origin trust boundary.
-
-Six source-guided encodings cover five published figures or passages. They are
-small original projections, not six independent benchmarks and not the initially
-contemplated 30 published examples. No upstream model-weaving, lens, event-
-structure, SAT, or graph-rewrite implementation was executed.
-
-## Producer/checker boundary
-
-`src/checker.py` imports only the Python standard library. It does not import the
-producer, normalizer, semantic engine, generator, baselines, or oracle. It parses
-the packet independently; replays the original and selected traces; validates
-observations, typing, receipt domains, old values, order, local minimum
-cardinality, refusal-tree partitioning, and minimum-policy-core claims.
-
-This source separation reduces common-mode implementation risk. It is not
-independent authorship, blind review, cryptographic authentication, or a proof of
-the source that recorded the input. A coordinated change to an input and its
-certificate may define another valid packet and be accepted by design.
-
-The checker trusts Python, the execution environment, and the supplied packet as
-the specification. It establishes bounded internal consistency, not a Lean, Coq,
-Isabelle, or comparable machine-checked theorem.
-
-## Bounds and resources
-
-The executable schema admits at most 12 tags, 96 occurrences, 512 cells, 64
-designated nodes, 192 designated edges, 256 integer-coded values per cell, and
-10,000 proof nodes. Proof depth is bounded by the tag count. The mathematical
-complexity results quantify over unbounded finite inputs; NP-completeness is not a
-claim about a fixed twelve-bit universe.
-
-The final fresh campaign within the integrated run used one worker, 22.483 CPU
-seconds, 22.498 wall seconds, peak RSS 110,616 KiB, and a maximum recorded case
-time of 0.049 seconds. These values establish resource closure only and are not a
-comparative performance claim. The earlier recorded campaign remains preserved;
-runtime fields are expected to vary and are excluded from semantic comparison.
-
-## Repository map
-
-- `proofs/semantics.md` - definitions and written proofs T1-T26.
-- `src/` - semantic engine, producer, checker, direct oracle, input construction,
-  structural construction, and transparent information ablations.
-- `tests/` - semantic, structural, source-projection, mutation, and pilot protocols.
-- `results/` - exact input streams, summaries, coverage, and final clean-run record.
-- `claim_evidence_ledger.csv` - claim-to-proof/test/raw-record mapping and scope.
-- `external_resources.csv` - scholarly/workflow sources, reading scope, licensing,
-  and integration mode.
-- `docs/` - schema, source-projection notes, resource account, calibrated literature
-  matrix, and reproduction status.
-
-All generated and source-guided inputs in this repository are original artifact
-material. Literature PDFs and upstream tools are not redistributed. The license
-for original repository material is in `LICENSE`; publisher template assets are
-outside this standalone repository in the complete project package.
+- `src/`: engine, producer, checker, direct oracle, generators, and reductions.
+- `tests/`: semantic, structural, source-projection, mutation, and pilot tests.
+- `proofs/semantics.md`: definitions and written proofs T1--T26.
+- `results/`: immutable campaign records, summaries, examples, and final validation.
+- `docs/`: schema, proof/code map, reproduction, resources, evidence limits, and audit.
+- `claim_evidence_ledger.csv`: claim-to-proof/test/result mapping.

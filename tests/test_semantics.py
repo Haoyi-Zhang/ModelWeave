@@ -89,6 +89,39 @@ class Semantics(unittest.TestCase):
                 self.assertEqual(cert['kind'],'optimal');self.assertEqual(cert['cost'],best);cover_count+=1
         EVIDENCE['reductions']={'SAT_formulas':sat_count,'vertex_cover_graphs':cover_count,'differences':0}
 
+    def test_fixed_mask_local_cardinality_and_protocol(self):
+        # Query mask M keeps b1, b2, and reader r.  The four-fact explanation is
+        # inclusion-minimal but not minimum-cardinality; the checker must reject it.
+        raw=generate.make([1],[
+            generate.ev(0,{}, {0:0}),  # b1
+            generate.ev(1,{}, {0:1}),  # g1
+            generate.ev(2,{}, {0:0}),  # b2
+            generate.ev(3,{}, {0:1}),  # g2
+            generate.ev(4,{0:[1]}, {}), # r
+        ],5,[2])
+        c=engine.parse_case(raw);mask=(1<<0)|(1<<2)|(1<<4)
+        self.assertIsNone(engine.replay(c,mask))
+        minimum={'kind':'local','mask':mask,'event':4,'cell':0,
+                 'on':(1<<4)|(1<<2),'off':1<<3}
+        inclusion_only={'kind':'local','mask':mask,'event':4,'cell':0,
+                        'on':(1<<4)|(1<<0),'off':(1<<1)|(1<<3)}
+        checker.check(raw,minimum)
+        with self.assertRaisesRegex(checker.Rejected,'minimum-cardinality'):
+            checker.check(raw,inclusion_only)
+        self.assertEqual(producer.local_obstruction(c,mask),minimum)
+
+        # The shipped zero-cost optimum authorizes its cost leaf with budget -1.
+        example=json.loads((Path(__file__).resolve().parents[1]/'results/examples/example-03.json').read_text())
+        self.assertEqual(example['certificate']['cost'],0)
+        checker.check(example['case'],example['certificate'])
+        bad=copy.deepcopy(example['certificate']);bad['kind']='infeasible'
+        bad.pop('cost');bad.pop('outcome');bad['core_on']=bad['on'];bad['core_off']=bad['off'];bad['witnesses']=[]
+        with self.assertRaises(checker.Rejected):checker.check(example['case'],bad)
+        EVIDENCE['targeted_protocol']={
+            'query_mask':mask,'minimum_facts':3,'inclusion_minimal_nonminimum_facts':4,
+            'minimum_accepted':True,'nonminimum_rejected':True,
+            'example_03_zero_cost_accepted':True,'cost_leaf_rejected_without_optimal_budget':True}
+
     def test_mutations(self):
         raw=generate.named()['stale_complement'];c=engine.parse_case(raw);good={'kind':'success','outcome':engine.replay(c,2)}
         trials=[]

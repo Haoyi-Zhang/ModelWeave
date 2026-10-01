@@ -100,7 +100,7 @@ def main() -> int:
             if load(ROOT/'results/examples'/x.name)!=load(x):raise AssertionError('source projection differs')
         report.update(passed=True,semantic_campaign_records_compared=records,
                       independently_checked_campaign_packets=checked_packets,
-                      structural_inputs_compared=165,source_guided_inputs_compared=6,
+                      structural_inputs_compared=421,source_guided_inputs_compared=6,
                       hashes_generated=False,comparison='exact uncompressed semantic records and scientific counters; timings excluded')
     except (OSError,ValueError,TypeError,AssertionError,RuntimeError,subprocess.TimeoutExpired) as exc:
         report['error']=str(exc).replace(str(out),'$OUTPUT')
