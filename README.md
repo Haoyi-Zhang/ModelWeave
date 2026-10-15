@@ -124,3 +124,13 @@ The written proofs and finite checks have different roles. The checker has a
 separate implementation path; it checks packet consistency rather than packet
 origin. The source interfaces preserve the declared fixed histories and do not
 introduce rematching, hidden reads, concurrency or arbitrary graph rewriting.
+
+## Manuscript diagrams
+
+The model and protocol schematics are drawn directly in Python as vector PDFs
+with embedded STIX fonts. They encode the stated relationships, not measured
+performance. To regenerate them with Python 3.9+ and Matplotlib:
+
+```sh
+python -B figures/draw_schematics.py --output figures
+```
